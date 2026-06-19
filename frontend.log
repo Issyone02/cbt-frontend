@@ -1,0 +1,55 @@
+
+> cbt-frontend@1.0.0 dev
+> vite --host 0.0.0.0
+
+
+  VITE v5.4.21  ready in 250 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://169.254.0.21:5173/
+9:41:30 AM [vite] Pre-transform error: Failed to resolve import "./pages/PasswordResets" from "src/App.tsx". Does the file exist?
+9:41:30 AM [vite] Internal server error: Failed to resolve import "./pages/PasswordResets" from "src/App.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /home/ubuntu/cbt-system/cbt-system-full/frontend/src/App.tsx:21:27
+  35 |  import ManageAttempts from "./pages/ManageAttempts";
+  36 |  import Reports from "./pages/Reports";
+  37 |  import PasswordResets from "./pages/PasswordResets";
+     |                              ^
+  38 |  import AuditLog from "./pages/AuditLog";
+  39 |  import ProtectedRoute from "./components/ProtectedRoute";
+      at TransformPluginContext._formatError (file:///home/ubuntu/cbt-system/cbt-system-full/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///home/ubuntu/cbt-system/cbt-system-full/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///home/ubuntu/cbt-system/cbt-system-full/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///home/ubuntu/cbt-system/cbt-system-full/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 23)
+      at async TransformPluginContext.transform (file:///home/ubuntu/cbt-system/cbt-system-full/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///home/ubuntu/cbt-system/cbt-system-full/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///home/ubuntu/cbt-system/cbt-system-full/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///home/ubuntu/cbt-system/cbt-system-full/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+9:41:51 AM [vite] page reload src/App.tsx
+9:43:51 AM [vite] hmr update /src/pages/ManageUsers.tsx, /src/index.css
+9:44:12 AM [vite] hmr update /src/pages/LecturerDashboard.tsx, /src/index.css
+9:44:40 AM [vite] hmr update /src/pages/ViewExams.tsx, /src/index.css
+9:45:06 AM [vite] hmr update /src/pages/ManageAttempts.tsx, /src/index.css
+9:45:44 AM [vite] hmr update /src/pages/Reports.tsx, /src/index.css
+9:46:08 AM [vite] hmr update /src/pages/AuditLog.tsx, /src/index.css
+9:46:30 AM [vite] hmr update /src/pages/CreateExam.tsx, /src/index.css
+9:46:49 AM [vite] hmr update /src/pages/AvailableExams.tsx, /src/index.css
+9:47:04 AM [vite] hmr update /src/pages/MyResults.tsx, /src/index.css
+9:47:33 AM [vite] hmr update /src/pages/TakingExam.tsx, /src/index.css
+9:47:44 AM [vite] hmr update /src/pages/ResultView.tsx, /src/index.css
+9:48:13 AM [vite] hmr update /src/pages/Login.tsx, /src/index.css
+9:48:27 AM [vite] hmr update /src/pages/EditExam.tsx, /src/index.css
+9:49:06 AM [vite] hmr update /src/pages/ManageQuestions.tsx, /src/index.css
+9:49:24 AM [vite] hmr update /src/pages/ReviewExam.tsx, /src/index.css
+9:49:34 AM [vite] hmr update /src/pages/ExamInstructions.tsx, /src/index.css
+9:49:56 AM [vite] hmr update /src/components/QuestionForm.tsx, /src/index.css
+9:50:07 AM [vite] hmr update /src/components/RichTextEditor.tsx, /src/index.css
+9:50:12 AM [vite] hmr update /src/components/MathRenderer.tsx, /src/index.css
+9:50:22 AM [vite] hmr update /src/pages/StudentDashboard.tsx, /src/index.css
+9:50:36 AM [vite] hmr update /src/pages/AdminDashboard.tsx, /src/index.css
+9:51:03 AM [vite] hmr update /src/pages/Passwordresets.tsx, /src/index.css
+9:51:32 AM [vite] hmr update /src/pages/ViewExams.tsx, /src/index.css
+9:51:48 AM [vite] hmr update /src/index.css
+9:51:52 AM [vite] page reload tailwind.config.js

@@ -1,0 +1,67 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Default text color for body to ensure visibility in light mode */
+  body {
+    @apply bg-gray-50 text-gray-900;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Force color scheme */
+  :root {
+    color-scheme: light;
+  }
+  
+  .dark {
+    color-scheme: dark;
+  }
+
+  /* Dark mode body override */
+  .dark body {
+    @apply bg-gray-900 text-gray-100;
+  }
+
+  /* Standard Input & Field Styles - Ensuring Light Mode Visibility */
+  input, select, textarea {
+    @apply bg-white border-gray-200 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500;
+  }
+
+  .dark input, .dark select, .dark textarea {
+    @apply bg-gray-900 border-gray-700 text-gray-100 placeholder-gray-500 focus:border-blue-400 focus:ring-blue-400;
+  }
+
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-200 rounded-full;
+  }
+  
+  .dark ::-webkit-scrollbar-thumb {
+    @apply bg-gray-800;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-300;
+  }
+  
+  .dark ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-700;
+  }
+}
+
+@layer components {
+  /* Custom utility for glass effect */
+  .glass {
+    @apply backdrop-blur-md bg-white/70 dark:bg-gray-900/70 border border-white/20 dark:border-gray-800/50;
+  }
+}
