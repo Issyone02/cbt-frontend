@@ -176,6 +176,11 @@ export default function Login() {
             {loading ? 'Logging in...' : 'Login'}
           </button>
 
+          <div className="mt-3 text-center text-[11px] text-gray-400 leading-relaxed">
+            Have a <strong className="text-gray-200">temporary password</strong> from your developer?
+            Type it in the Password field above — no special screen needed.
+          </div>
+
           <button type="button" onClick={() => { setScreen('forgot'); setForgotSent(false); setForgotEmail(''); }}
             className="w-full mt-3 text-sm text-indigo-300 hover:text-white hover:underline transition-colors">
             Forgot your password?
