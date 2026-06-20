@@ -395,7 +395,12 @@ export default function ManageQuestions() {
                     </div>
                     <div className="flex gap-1">
                       <button onClick={() => setEditing(q)} className="p-1.5 text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">✏️</button>
-                      <button onClick={() => handleDelete(q.id)} className="p-1.5 text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-colors">🗑️</button>
+                      {/* Delete is admin-only — lecturers can add and edit but not delete questions.
+                          Backend independently enforces this too (DELETE /api/admin/questions/:id
+                          excludes Lecturer), so this is defence-in-depth, not the only guard. */}
+                      {!isLecturer && (
+                        <button onClick={() => handleDelete(q.id)} className="p-1.5 text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-colors">🗑️</button>
+                      )}
                     </div>
                   </div>
                   <div className="text-gray-800 dark:text-gray-100 text-sm font-medium mb-4 leading-relaxed" dangerouslySetInnerHTML={{ __html: q.text }} />
