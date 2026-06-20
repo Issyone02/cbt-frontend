@@ -105,7 +105,15 @@ export default function Login() {
     setForceLoading(true);
     try {
       const currentUser = useAuthStore.getState().user;
-      await api.put(`/admin/users/${currentUser?.id}`, { password: forceNewPwd });
+      // The backend's self-password-change guard requires `currentPassword`
+      // whenever userId === req.user.id. Here, `password` (the login form
+      // state) still holds the temporary password they just authenticated
+      // with — reuse it so this request isn't rejected the same way the
+      // Edit User self-change flow was.
+      await api.put(`/admin/users/${currentUser?.id}`, {
+        password: forceNewPwd,
+        currentPassword: password
+      });
       toast.success('Password changed successfully. Welcome back!');
       const user = useAuthStore.getState().user;
       if (user?.roles.includes('Student')) navigate('/dashboard');
