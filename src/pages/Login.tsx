@@ -203,6 +203,11 @@ export default function Login() {
                 </p>
               </div>
 
+              <div className="bg-indigo-900/20 border border-indigo-500/20 rounded-lg px-3 py-2.5 mb-4 text-[11px] text-indigo-200">
+                Already have a <strong>temporary password</strong> from your developer (not a 6-digit code)?
+                You don't need this screen — go back and log in with it directly.
+              </div>
+
               <form onSubmit={handleForgot} className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-200 mb-1">Email Address</label>
