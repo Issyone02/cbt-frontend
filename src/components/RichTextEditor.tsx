@@ -67,7 +67,10 @@ export default function RichTextEditor({ value, onChange, placeholder }: RichTex
 
   const insertMath = () => {
     if (editor && mathExpression) {
-      editor.commands.insertContent(` \\(${mathExpression}\\) `);
+      // Must use the extension's own command to create a real math node —
+      // inserting plain text (even with \( \) delimiters) never triggers
+      // KaTeX rendering, it just sits there as literal characters.
+      editor.commands.insertInlineMath({ latex: mathExpression });
       setMathExpression('');
       setShowMathInput(false);
     }
